@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".core.MyApplication"
+        android:allowBackup="true"
+        android:fullBackupOnly="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:saveEnabled="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TextTile">
+        <activity
+            android:name=".presentation.screen.master.shade_master.shade_master.ShadeMultipleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.activity.EmptyExportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.near_complete_order.NearCompleteOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.allot_feature.employee_allotment.sleep.EmployeeAllotmentSleepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.storage_feature.storage_file.StorageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.authority.list.UserListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.authority.permission.PermissionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.authority.user.AuthorityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.storage_feature.ready_stock.readystock.ReadyStockActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.allot_feature.employee_allotment.history.EmployeeReadingHistoryListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.storage_feature.ready_stock.list.ReadyStockListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.reading_feature.yarn_reading.yarn_company_reading_list.YarnCompanyListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.reading_feature.yarn_reading.yarn_reading_list.YarnReadingListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.reading_feature.daily_reading.reading.DailyReadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.reading_feature.daily_reading.list.DailyReadingListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.allot_feature.employee_allotment.list.EmployeeAllotListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.allot_feature.allot_program.activity.list.AllotProgramListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.allot_feature.allot_program.activity.allot.AllotProgramActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.order_feature.order_history.OrderHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.reading_feature.view_order.ViewOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.order_feature.order_master.new_order.order.OrderMasterEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.order_feature.order_master.new_order.order_tracker.OrderTrackerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.order_feature.order_master.new_order.order_sublist.SubOrderListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.order_feature.order_master.new_order.order.OrderMasterInsertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.features.order_feature.order_master.new_order.orderlist.OrderListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.master.employee_master.EmployeeMasterList"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.master.jala_master.JalaMasterList"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.master.machine_master.MachineMasterList"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.master.yarn_master.YarnMasterList"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.master.design_master.activity.design_master.DesignMasterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.master.party_master.PartyMasterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.master.employee_master.EmployeeMasterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.master.jala_master.JalaMasterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.master.machine_master.MachineMasterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.master.party_master.PartyMasterList"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.master.yarn_master.YarnMasterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.master.shade_master.sublist.ShadeMasterListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.screen.master.design_master.activity.design_list.DesignMasterList"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.activity.ImportExportDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.activity.ExcelToJson"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.activity.ImageEditing"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.activity.SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.ui.activity.CustomeScanner"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.ui.activity.ImagePreviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.ui.activity.PrintActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.ui.activity.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".presentation.ui.activity.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.ui.activity.SignupActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.master.shade_master.list.ShadeMasterSubListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <receiver
+            android:name=".presentation.ui.receivers.InternetReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

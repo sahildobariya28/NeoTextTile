@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            app:layout_constraintVertical_bias="1.0">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+
+
+                <LinearLayout
+                    android:id="@+id/card_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="@drawable/blue_light_card_bg"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/card_on_machine_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/blue_light_card_bg"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/card_padding"
+                    app:layout_constraintStart_toStartOf="@+id/card_padding"
+                    app:layout_constraintTop_toBottomOf="@+id/card_padding" />
+
+                <LinearLayout
+                    android:id="@+id/card_on_machine_completed"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/blue_light_card_bg"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/card_on_machine_padding"
+                    app:layout_constraintStart_toStartOf="@+id/card_on_machine_padding"
+                    app:layout_constraintTop_toBottomOf="@+id/card_on_machine_padding" />
+
+                <LinearLayout
+                    android:id="@+id/card_ready_to_dispatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/blue_light_card_bg"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/card_on_machine_completed"
+                    app:layout_constraintStart_toStartOf="@+id/card_on_machine_completed"
+                    app:layout_constraintTop_toBottomOf="@+id/card_on_machine_completed" />
+
+                <LinearLayout
+                    android:id="@+id/card_warehouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/blue_light_card_bg"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/card_ready_to_dispatch"
+                    app:layout_constraintStart_toStartOf="@+id/card_ready_to_dispatch"
+                    app:layout_constraintTop_toBottomOf="@+id/card_ready_to_dispatch" />
+
+                <LinearLayout
+                    android:id="@+id/card_final_dispatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/blue_light_card_bg"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/card_warehouse"
+                    app:layout_constraintStart_toStartOf="@+id/card_warehouse"
+                    app:layout_constraintTop_toBottomOf="@+id/card_warehouse" />
+
+                <LinearLayout
+                    android:id="@+id/card_delivered"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/blue_light_card_bg"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/card_final_dispatch"
+                    app:layout_constraintStart_toStartOf="@+id/card_final_dispatch"
+                    app:layout_constraintTop_toBottomOf="@+id/card_final_dispatch" />
+
+                <LinearLayout
+                    android:id="@+id/card_damage"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/blue_light_card_bg"
+                    android:backgroundTint="#FFE4E4"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/card_delivered"
+                    app:layout_constraintStart_toStartOf="@+id/card_delivered"
+                    app:layout_constraintTop_toBottomOf="@+id/card_delivered" />
+
+                <LinearLayout
+                    android:id="@+id/card_total_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/blue_light_card_bg"
+                    android:backgroundTint="@color/white_theme_extra_light"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/card_damage"
+                    app:layout_constraintStart_toStartOf="@+id/card_damage"
+                    app:layout_constraintTop_toBottomOf="@+id/card_damage" />
+
+                <TextView
+                    android:id="@+id/count_padding"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:minWidth="40dp"
+                    android:text="00"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_padding"
+                    app:layout_constraintEnd_toStartOf="@+id/dot_padding"
+                    app:layout_constraintStart_toStartOf="@+id/card_padding"
+                    app:layout_constraintTop_toTopOf="@+id/dot_padding" />
+
+                <TextView
+                    android:id="@+id/txt_padding"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="false"
+                    android:text="Pending"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_padding"
+                    app:layout_constraintEnd_toEndOf="@+id/card_padding"
+                    app:layout_constraintStart_toEndOf="@+id/dot_padding"
+                    app:layout_constraintTop_toTopOf="@+id/dot_padding" />
+
+                <TextView
+                    android:id="@+id/count_on_machine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:minWidth="40dp"
+                    android:text="00"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_on_machine"
+                    app:layout_constraintEnd_toStartOf="@+id/dot_on_machine"
+                    app:layout_constraintStart_toStartOf="@+id/card_on_machine_padding"
+                    app:layout_constraintTop_toTopOf="@+id/dot_on_machine" />
+
+                <TextView
+                    android:id="@+id/txt_on_machine_padding"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="false"
+                    android:text="On Machine Padding"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_on_machine"
+                    app:layout_constraintEnd_toEndOf="@+id/card_on_machine_padding"
+                    app:layout_constraintStart_toEndOf="@+id/dot_on_machine"
+                    app:layout_constraintTop_toBottomOf="@+id/line_padding" />
+
+                <TextView
+                    android:id="@+id/count_on_machine_completed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="00"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_on_machine_completed"
+                    app:layout_constraintEnd_toStartOf="@+id/dot_on_machine_completed"
+                    app:layout_constraintStart_toStartOf="@+id/card_on_machine_completed"
+                    app:layout_constraintTop_toTopOf="@+id/dot_on_machine_completed" />
+
+                <TextView
+                    android:id="@+id/txt_on_machine_completed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="false"
+                    android:text="On Machine Completed"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_on_machine_completed"
+                    app:layout_constraintEnd_toEndOf="@+id/card_on_machine_completed"
+                    app:layout_constraintStart_toEndOf="@+id/dot_on_machine_completed"
+                    app:layout_constraintTop_toBottomOf="@+id/line_on_machine" />
+
+                <TextView
+                    android:id="@+id/count_ready_to_dispatch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="00"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_ready_to_dispatch"
+                    app:layout_constraintEnd_toStartOf="@+id/dot_ready_to_dispatch"
+                    app:layout_constraintStart_toStartOf="@+id/card_ready_to_dispatch"
+                    app:layout_constraintTop_toTopOf="@+id/dot_ready_to_dispatch" />
+
+                <TextView
+                    android:id="@+id/txt_ready_to_dispatch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="false"
+                    android:text="Ready to Dispatch"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_ready_to_dispatch"
+                    app:layout_constraintEnd_toEndOf="@+id/card_ready_to_dispatch"
+                    app:layout_constraintStart_toEndOf="@+id/dot_ready_to_dispatch"
+                    app:layout_constraintTop_toTopOf="@+id/card_ready_to_dispatch" />
+
+                <TextView
+                    android:id="@+id/count_ware_house"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="00"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_ware_house"
+                    app:layout_constraintEnd_toStartOf="@+id/dot_ware_house"
+                    app:layout_constraintStart_toStartOf="@+id/card_warehouse"
+                    app:layout_constraintTop_toTopOf="@+id/dot_ware_house" />
+
+                <TextView
+                    android:id="@+id/txt_warehouse"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="false"
+                    android:text="WareHouse"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_ware_house"
+                    app:layout_constraintEnd_toEndOf="@+id/card_warehouse"
+                    app:layout_constraintStart_toEndOf="@+id/dot_ware_house"
+                    app:layout_constraintTop_toTopOf="@+id/dot_ware_house" />
+
+                <TextView
+                    android:id="@+id/count_final_dispatch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="1dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="00"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_final_dispatch"
+                    app:layout_constraintEnd_toStartOf="@+id/dot_final_dispatch"
+                    app:layout_constraintStart_toStartOf="@+id/card_final_dispatch"
+                    app:layout_constraintTop_toBottomOf="@+id/line_ware_house" />
+
+                <TextView
+                    android:id="@+id/txt_final_dispatch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="false"
+                    android:text="Final Dispatch"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_final_dispatch"
+                    app:layout_constraintEnd_toEndOf="@+id/card_final_dispatch"
+                    app:layout_constraintStart_toEndOf="@+id/dot_final_dispatch"
+                    app:layout_constraintTop_toBottomOf="@+id/line_ware_house" />
+
+                <TextView
+                    android:id="@+id/count_delivered"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="00"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_delivered"
+                    app:layout_constraintEnd_toStartOf="@+id/dot_delivered"
+                    app:layout_constraintStart_toStartOf="@+id/card_delivered"
+                    app:layout_constraintTop_toBottomOf="@+id/line_final_dispatch" />
+
+                <TextView
+                    android:id="@+id/txt_delivered"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="false"
+                    android:text="Delivered"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_delivered"
+                    app:layout_constraintEnd_toEndOf="@+id/card_delivered"
+                    app:layout_constraintStart_toEndOf="@+id/dot_delivered"
+                    app:layout_constraintTop_toTopOf="@+id/dot_delivered" />
+
+
+                <TextView
+                    android:id="@+id/count_damage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="00"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_damage"
+                    app:layout_constraintEnd_toStartOf="@+id/dot_damage"
+                    app:layout_constraintStart_toStartOf="@+id/card_damage"
+                    app:layout_constraintTop_toBottomOf="@+id/line_damage" />
+
+                <TextView
+                    android:id="@+id/txt_damage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="false"
+                    android:text="Damage"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_damage"
+                    app:layout_constraintEnd_toEndOf="@+id/card_damage"
+                    app:layout_constraintStart_toEndOf="@+id/dot_damage"
+                    app:layout_constraintTop_toTopOf="@+id/dot_damage" />
+
+                <TextView
+                    android:id="@+id/count_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:minWidth="40dp"
+                    android:text="00"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_total"
+                    app:layout_constraintStart_toStartOf="@+id/card_total_count"
+                    app:layout_constraintTop_toTopOf="@+id/dot_total" />
+
+                <TextView
+                    android:id="@+id/txt_total_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/regular"
+                    android:includeFontPadding="false"
+                    android:text="Total Order"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dot_total"
+                    app:layout_constraintEnd_toEndOf="@+id/card_total_count"
+                    app:layout_constraintStart_toEndOf="@+id/dot_total"
+                    app:layout_constraintTop_toTopOf="@+id/dot_total" />
+
+
+                <ImageView
+                    android:id="@+id/dot_padding"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle"
+                    android:clickable="false"
+                    android:padding="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_padding"
+                    app:layout_constraintEnd_toEndOf="@+id/line_padding"
+                    app:layout_constraintStart_toStartOf="@+id/line_padding"
+                    app:layout_constraintTop_toTopOf="@+id/card_padding" />
+
+
+                <ImageView
+                    android:id="@+id/line_padding"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/line"
+                    app:layout_constraintBottom_toTopOf="@+id/dot_on_machine"
+                    app:layout_constraintEnd_toEndOf="@+id/dot_on_machine"
+                    app:layout_constraintStart_toStartOf="@+id/dot_on_machine"
+                    app:layout_constraintTop_toBottomOf="@+id/dot_padding" />
+
+                <ImageView
+                    android:id="@+id/dot_on_machine"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle"
+                    android:clickable="false"
+                    android:padding="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_on_machine_padding"
+                    app:layout_constraintEnd_toEndOf="@+id/line_on_machine"
+                    app:layout_constraintStart_toStartOf="@+id/line_on_machine"
+                    app:layout_constraintTop_toTopOf="@+id/card_on_machine_padding" />
+
+                <ImageView
+                    android:id="@+id/line_on_machine"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/line"
+                    app:layout_constraintBottom_toTopOf="@+id/dot_on_machine_completed"
+                    app:layout_constraintEnd_toEndOf="@+id/dot_on_machine_completed"
+                    app:layout_constraintStart_toStartOf="@+id/dot_on_machine_completed"
+                    app:layout_constraintTop_toBottomOf="@+id/dot_on_machine" />
+
+                <ImageView
+                    android:id="@+id/dot_on_machine_completed"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle"
+                    android:clickable="false"
+                    android:padding="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_on_machine_completed"
+                    app:layout_constraintEnd_toEndOf="@+id/line_on_machine_completed"
+                    app:layout_constraintStart_toStartOf="@+id/line_on_machine_completed"
+                    app:layout_constraintTop_toTopOf="@+id/card_on_machine_completed" />
+
+                <ImageView
+                    android:id="@+id/line_on_machine_completed"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/line"
+                    app:layout_constraintBottom_toTopOf="@+id/dot_ready_to_dispatch"
+                    app:layout_constraintEnd_toEndOf="@+id/dot_ready_to_dispatch"
+                    app:layout_constraintStart_toStartOf="@+id/dot_ready_to_dispatch"
+                    app:layout_constraintTop_toBottomOf="@+id/dot_on_machine_completed" />
+
+                <ImageView
+                    android:id="@+id/dot_ready_to_dispatch"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle"
+                    android:clickable="false"
+                    android:padding="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_ready_to_dispatch"
+                    app:layout_constraintEnd_toEndOf="@+id/line_ready_to_dispatch"
+                    app:layout_constraintStart_toStartOf="@+id/line_ready_to_dispatch"
+                    app:layout_constraintTop_toTopOf="@+id/card_ready_to_dispatch" />
+
+                <ImageView
+                    android:id="@+id/line_ready_to_dispatch"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/line"
+                    app:layout_constraintBottom_toTopOf="@+id/dot_ware_house"
+                    app:layout_constraintEnd_toEndOf="@+id/dot_ware_house"
+                    app:layout_constraintStart_toStartOf="@+id/dot_ware_house"
+                    app:layout_constraintTop_toBottomOf="@+id/dot_ready_to_dispatch" />
+
+                <ImageView
+                    android:id="@+id/dot_ware_house"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle"
+                    android:clickable="false"
+                    android:padding="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_warehouse"
+                    app:layout_constraintEnd_toEndOf="@+id/line_ware_house"
+                    app:layout_constraintStart_toStartOf="@+id/line_ware_house"
+                    app:layout_constraintTop_toTopOf="@+id/card_warehouse" />
+
+                <ImageView
+                    android:id="@+id/line_ware_house"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/line"
+                    app:layout_constraintBottom_toTopOf="@+id/dot_final_dispatch"
+                    app:layout_constraintEnd_toEndOf="@+id/dot_final_dispatch"
+                    app:layout_constraintStart_toStartOf="@+id/dot_final_dispatch"
+                    app:layout_constraintTop_toBottomOf="@+id/dot_ware_house" />
+
+                <ImageView
+                    android:id="@+id/dot_final_dispatch"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle"
+                    android:clickable="false"
+                    android:padding="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_final_dispatch"
+                    app:layout_constraintEnd_toEndOf="@+id/line_total"
+                    app:layout_constraintStart_toStartOf="@+id/line_total"
+                    app:layout_constraintTop_toTopOf="@+id/card_final_dispatch" />
+
+                <ImageView
+                    android:id="@+id/line_final_dispatch"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/line"
+                    app:layout_constraintBottom_toTopOf="@+id/dot_delivered"
+                    app:layout_constraintEnd_toEndOf="@+id/dot_delivered"
+                    app:layout_constraintStart_toStartOf="@+id/dot_delivered"
+                    app:layout_constraintTop_toBottomOf="@+id/dot_final_dispatch" />
+
+                <ImageView
+                    android:id="@+id/dot_delivered"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle"
+                    android:clickable="false"
+                    android:padding="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_delivered"
+                    app:layout_constraintEnd_toEndOf="@+id/line_total"
+                    app:layout_constraintStart_toStartOf="@+id/line_total"
+                    app:layout_constraintTop_toTopOf="@+id/card_delivered" />
+
+                <ImageView
+                    android:id="@+id/line_damage"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/line"
+                    app:layout_constraintBottom_toTopOf="@+id/dot_damage"
+                    app:layout_constraintEnd_toEndOf="@+id/dot_damage"
+                    app:layout_constraintStart_toStartOf="@+id/dot_damage"
+                    app:layout_constraintTop_toBottomOf="@+id/dot_delivered" />
+
+                <ImageView
+                    android:id="@+id/dot_damage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle"
+                    android:clickable="false"
+                    android:padding="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_damage"
+                    app:layout_constraintEnd_toEndOf="@+id/line_total"
+                    app:layout_constraintStart_toStartOf="@+id/line_total"
+                    app:layout_constraintTop_toTopOf="@+id/card_damage" />
+
+                <ImageView
+                    android:id="@+id/line_total"
+                    android:layout_width="80dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/vertical_dotted_line"
+                    app:layout_constraintBottom_toTopOf="@+id/dot_total"
+                    app:layout_constraintEnd_toEndOf="@+id/dot_total"
+                    app:layout_constraintStart_toStartOf="@+id/dot_total"
+                    app:layout_constraintTop_toBottomOf="@+id/dot_damage" />
+
+                <ImageView
+                    android:id="@+id/dot_total"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/circle"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_total_count"
+                    app:layout_constraintStart_toEndOf="@+id/count_total"
+                    app:layout_constraintTop_toTopOf="@+id/card_total_count"
+                    app:tint="@color/white_text_light" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

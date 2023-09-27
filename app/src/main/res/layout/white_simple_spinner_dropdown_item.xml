@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@+id/edit_name"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/white_theme_extra_light"
+    android:hint="Enter Phone Number"
+    android:textColorHint="@color/white_text_light"
+    android:textSize="14sp"
+    android:singleLine="true"
+    android:minHeight="55dp"
+    android:maxHeight="55dp"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="15dp"
+    android:fontFamily="@font/regular"
+    android:includeFontPadding="false"
+    android:textColor="@color/text_title_color"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="order_model"
+            type="com.example.texttile.data.model.OrderMasterModel" />
+
+        <variable
+            name="total"
+            type="java.lang.String" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/view_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg_unselected"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:src="@drawable/vector" />
+
+                <TextView
+                    android:id="@+id/text_order_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingHorizontal="15dp"
+                    android:text="@{order_model.sub_order_no}"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/text_Qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white_theme_extra_light"
+                    android:clickable="false"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:minWidth="40dp"
+                    android:padding="8dp"
+                    android:paddingHorizontal="15dp"
+                    android:singleLine="true"
+                    android:text="@{total}"
+                    android:textColor="@color/text_light1"
+                    android:textSize="12sp" />
+
+                <!--            <ImageView-->
+                <!--                android:id="@+id/btn_edit"-->
+                <!--                android:layout_width="40dp"-->
+                <!--                android:layout_height="match_parent"-->
+                <!--                android:padding="5dp"-->
+                <!--                android:visibility="gone"-->
+                <!--                android:src="@drawable/edit" />-->
+
+                <!--            <ImageView-->
+                <!--                android:id="@+id/btn_delete"-->
+                <!--                android:layout_width="40dp"-->
+                <!--                android:layout_height="match_parent"-->
+                <!--                android:padding="5dp"-->
+                <!--                android:visibility="gone"-->
+                <!--                android:src="@drawable/delete" />-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:includeFontPadding="false"
+                        android:text="Design No :"
+                        android:textColor="@color/white_text_light"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/text_design_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:includeFontPadding="false"
+                        android:text="@{order_model.design_no}"
+                        android:textColor="@color/text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:includeFontPadding="false"
+                        android:text="Shade No :"
+                        android:textColor="@color/white_text_light"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/text_shade_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:includeFontPadding="false"
+                        android:text="@{order_model.shade_no}"
+                        android:textColor="@color/text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btn_down"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:padding="15dp"
+                        android:src="@drawable/down"
+                        app:tint="@color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/white_text_light"
+                    android:orientation="vertical" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/regular"
+                                android:includeFontPadding="false"
+                                android:paddingVertical="5dp"
+                                android:text="Date:"
+                                android:textColor="@color/text_light1"
+                                android:textSize="12sp"
+                                app:drawableLeftCompat="@drawable/bullets" />
+
+                            <TextView
+                                android:id="@+id/text_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/regular"
+                                android:includeFontPadding="false"
+                                android:paddingVertical="5dp"
+                                android:singleLine="true"
+                                android:text="@{order_model.date}"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/regular"
+                                android:includeFontPadding="false"
+                                android:paddingVertical="5dp"
+                                android:text="Type :"
+                                android:textColor="@color/text_light1"
+                                android:textSize="12sp"
+                                app:drawableLeftCompat="@drawable/bullets" />
+
+                            <TextView
+                                android:id="@+id/text_order_type"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/regular"
+                                android:includeFontPadding="false"
+                                android:paddingVertical="5dp"
+                                android:singleLine="true"
+                                android:text="@{order_model.order_type}"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/regular"
+                                android:includeFontPadding="false"
+                                android:paddingVertical="5dp"
+                                android:text="Party :"
+                                android:textColor="@color/text_light1"
+                                android:textSize="12sp"
+                                app:drawableLeftCompat="@drawable/bullets" />
+
+                            <TextView
+                                android:id="@+id/text_party_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/regular"
+                                android:includeFontPadding="false"
+                                android:paddingVertical="5dp"
+                                android:singleLine="true"
+                                android:text="@{order_model.party_name}"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/regular"
+                                android:includeFontPadding="false"
+                                android:paddingVertical="5dp"
+                                android:text="Approx Date :"
+                                android:textColor="@color/text_light1"
+                                android:textSize="12sp"
+                                app:drawableLeftCompat="@drawable/bullets" />
+
+                            <TextView
+                                android:id="@+id/text_approx_delivery_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/regular"
+                                android:includeFontPadding="false"
+                                android:paddingVertical="5dp"
+                                android:text="@{order_model.approx_Delivery_date}"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_tracker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_bg"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:paddingHorizontal="30dp"
+                    android:paddingVertical="7dp"
+                    android:text="Track"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

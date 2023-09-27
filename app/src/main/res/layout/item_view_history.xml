@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <com.example.texttile.presentation.ui.lib.new_swipe_feature.SwipeRevealLayout
+            android:id="@+id/swipeRevealLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dragEdge="right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:mode="same_level">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp">
+
+                <LinearLayout
+                    android:id="@+id/btn_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/edit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="Edit"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/delete" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="Delete"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bg_unselected"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:src="@drawable/vector" />
+
+                    <TextView
+                        android:id="@+id/text_order_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:paddingHorizontal="15dp"
+                        android:text="Order no"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/text_Qty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/white_theme_extra_light"
+                        android:clickable="false"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:minWidth="40dp"
+                        android:padding="8dp"
+                        android:paddingHorizontal="15dp"
+                        android:singleLine="true"
+                        android:text="\\000"
+                        android:textColor="@color/text_light1"
+                        android:textSize="12sp" />
+
+                    <!--            <ImageView-->
+                    <!--                android:id="@+id/btn_edit"-->
+                    <!--                android:layout_width="40dp"-->
+                    <!--                android:layout_height="match_parent"-->
+                    <!--                android:padding="5dp"-->
+                    <!--                android:visibility="gone"-->
+                    <!--                android:src="@drawable/edit" />-->
+
+                    <!--            <ImageView-->
+                    <!--                android:id="@+id/btn_delete"-->
+                    <!--                android:layout_width="40dp"-->
+                    <!--                android:layout_height="match_parent"-->
+                    <!--                android:padding="5dp"-->
+                    <!--                android:visibility="gone"-->
+                    <!--                android:src="@drawable/delete" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:includeFontPadding="false"
+                            android:text="Source:"
+                            android:textColor="@color/white_text_light"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/text_source"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:includeFontPadding="false"
+                            android:text="source"
+                            android:textColor="@color/text"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:includeFontPadding="false"
+                            android:text="Destination:"
+                            android:textColor="@color/white_text_light"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/text_destination"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:includeFontPadding="false"
+                            android:text="Destination"
+                            android:textColor="@color/text"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end|center_vertical"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/btn_down"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:padding="15dp"
+                            android:src="@drawable/down"
+                            app:tint="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/detail_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/white_text_light"
+                        android:orientation="vertical" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:drawablePadding="10dp"
+                                    android:fontFamily="@font/regular"
+                                    android:includeFontPadding="false"
+                                    android:paddingVertical="5dp"
+                                    android:text="Design No:"
+                                    android:textColor="@color/text_light1"
+                                    android:textSize="12sp"
+                                    app:drawableLeftCompat="@drawable/bullets" />
+
+                                <TextView
+                                    android:id="@+id/text_design_no"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:drawablePadding="10dp"
+                                    android:fontFamily="@font/regular"
+                                    android:includeFontPadding="false"
+                                    android:paddingVertical="5dp"
+                                    android:singleLine="true"
+                                    android:text="00"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:drawablePadding="10dp"
+                                    android:fontFamily="@font/regular"
+                                    android:includeFontPadding="false"
+                                    android:paddingVertical="5dp"
+                                    android:text="Date:"
+                                    android:textColor="@color/text_light1"
+                                    android:textSize="12sp"
+                                    app:drawableLeftCompat="@drawable/bullets" />
+
+                                <TextView
+                                    android:id="@+id/text_date"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:drawablePadding="10dp"
+                                    android:fontFamily="@font/regular"
+                                    android:includeFontPadding="false"
+                                    android:paddingVertical="5dp"
+                                    android:singleLine="true"
+                                    android:text="Date"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:drawablePadding="10dp"
+                                    android:fontFamily="@font/regular"
+                                    android:includeFontPadding="false"
+                                    android:paddingVertical="5dp"
+                                    android:text="Reason :"
+                                    android:textColor="@color/text_light1"
+                                    android:textSize="12sp"
+                                    app:drawableLeftCompat="@drawable/bullets" />
+
+                                <TextView
+                                    android:id="@+id/text_reasons"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:drawablePadding="10dp"
+                                    android:fontFamily="@font/regular"
+                                    android:includeFontPadding="false"
+                                    android:paddingVertical="5dp"
+                                    android:singleLine="true"
+                                    android:text="Reason"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:drawablePadding="10dp"
+                                    android:fontFamily="@font/regular"
+                                    android:includeFontPadding="false"
+                                    android:paddingVertical="5dp"
+                                    android:text="Shade No :"
+                                    android:textColor="@color/text_light1"
+                                    android:textSize="12sp"
+                                    app:drawableLeftCompat="@drawable/bullets" />
+
+                                <TextView
+                                    android:id="@+id/text_shade_no"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:drawablePadding="10dp"
+                                    android:fontFamily="@font/regular"
+                                    android:includeFontPadding="false"
+                                    android:paddingVertical="5dp"
+                                    android:singleLine="true"
+                                    android:text="Shade No"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:drawablePadding="10dp"
+                                    android:fontFamily="@font/regular"
+                                    android:includeFontPadding="false"
+                                    android:paddingVertical="5dp"
+                                    android:text="Slip:"
+                                    android:textColor="@color/text_light1"
+                                    android:textSize="12sp"
+                                    app:drawableLeftCompat="@drawable/bullets" />
+
+                                <TextView
+                                    android:id="@+id/text_slip"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:drawablePadding="10dp"
+                                    android:fontFamily="@font/regular"
+                                    android:includeFontPadding="false"
+                                    android:paddingVertical="5dp"
+                                    android:text="Slip"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btn_tracker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:paddingHorizontal="30dp"
+                        android:paddingVertical="7dp"
+                        android:text="Track"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.example.texttile.presentation.ui.lib.new_swipe_feature.SwipeRevealLayout>
+
+    </LinearLayout>
+</layout>

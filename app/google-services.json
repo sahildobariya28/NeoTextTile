@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1094221677084",
+    "firebase_url": "https://texttile-fedc8-default-rtdb.firebaseio.com",
+    "project_id": "texttile-fedc8",
+    "storage_bucket": "texttile-fedc8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094221677084:android:e4933218719946809315d9",
+        "android_client_info": {
+          "package_name": "com.example.texttile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094221677084-qnsmasjotakhpomqr6k63uc2v4ejdg59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwd0-zvWbnb3TuqnzDkRZSU_NydKqQo1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094221677084-qnsmasjotakhpomqr6k63uc2v4ejdg59.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

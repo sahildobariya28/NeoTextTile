@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#00000000">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toStartOf="@+id/guideline1"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/guideline3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/medium"
+                                android:includeFontPadding="false"
+                                android:text="Date"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <TextView
+                                    android:id="@+id/edit_current_date"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/edit_bg_white"
+                                    android:fontFamily="@font/medium"
+                                    android:gravity="center_vertical"
+                                    android:hint="Select Current Date"
+                                    android:includeFontPadding="false"
+                                    android:inputType="textCapCharacters"
+                                    android:paddingHorizontal="15dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/white_text_light"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/calender"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tint="#BFC6D2" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/medium"
+                                android:includeFontPadding="false"
+                                android:text="Manager Name"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/edit_manager_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@drawable/edit_bg_white"
+                                android:fontFamily="@font/medium"
+                                android:gravity="center_vertical"
+                                android:hint="Enter Manager Name"
+                                android:includeFontPadding="false"
+                                android:inputType="textCapCharacters"
+                                android:paddingHorizontal="15dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/white_text_light"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/medium"
+                                android:includeFontPadding="false"
+                                android:text="Machine Name"
+                                android:textColor="@color/text_title_color"
+                                android:textSize="14sp" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@drawable/edit_bg_white">
+
+                                <TextView
+                                    android:id="@+id/text_machine"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="55dp"
+                                    android:background="@drawable/edit_bg_white"
+                                    android:fontFamily="@font/medium"
+                                    android:gravity="center_vertical"
+                                    android:hint="Enter Machine"
+                                    android:includeFontPadding="false"
+                                    android:inputType="textCapCharacters"
+                                    android:paddingHorizontal="15dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/text_title_color"
+                                    android:textColorHint="@color/white_text_light"
+                                    android:textSize="14sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ProgressBar
+                                    android:id="@+id/progress"
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:padding="18dp"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="@+id/text_machine"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/medium"
+                                android:includeFontPadding="false"
+                                android:text="Order No"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/text_order_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@drawable/edit_bg_white"
+                                android:fontFamily="@font/medium"
+                                android:gravity="center_vertical"
+                                android:hint="Enter Order No"
+                                android:includeFontPadding="false"
+                                android:inputType="textCapCharacters"
+                                android:paddingHorizontal="15dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/white_text_light"
+                                android:textSize="14sp" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/medium"
+                                android:includeFontPadding="false"
+                                android:text="Select Option"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <Spinner
+                                    android:id="@+id/option_type"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="55dp"
+                                    android:background="@drawable/edit_bg_white"
+                                    android:fontFamily="@font/medium"
+                                    android:includeFontPadding="false"
+                                    android:singleLine="true"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/text_light"
+                                    android:textSize="14sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/down"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tint="#BFC6D2" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/medium"
+                                android:includeFontPadding="false"
+                                android:text="Daily Reading Qty"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/edit_daily_reading_qty"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@drawable/edit_bg_white"
+                                android:digits="0123456789"
+                                android:fontFamily="@font/medium"
+                                android:hint="Enter Daily Reading Qty"
+                                android:includeFontPadding="false"
+                                android:inputType="numberDecimal"
+                                android:paddingHorizontal="15dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/white_text_light"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/btn_add"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:background="@drawable/btn_bg"
+                                android:fontFamily="@font/medium"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="Add"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/btn_close"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/close_bg"
+                android:padding="5dp"
+                android:src="@drawable/close"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout3"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout3"
+                app:tint="#fff" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
+
+
+
+
+

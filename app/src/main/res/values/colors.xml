@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#465577</color>
+    <color name="purple_500">#12244F</color>
+    <color name="purple_700">#12244F</color>
+    <color name="teal_200">#465577</color>
+    <color name="teal_700">#2D3D64</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--    dark theme-->
+    <color name="theme">#12244F</color>
+    <color name="theme_light">#2D3D64</color>
+    <color name="theme_extra_light">#465577</color>
+    <color name="theme_extra_light_opacity">#40465577</color>
+    <color name="btn_color">#00A0EC</color>
+
+    <!--    white theme-->
+    <color name="white_theme_light">#DBE0E9</color>
+    <color name="white_theme_extra_light">#F7F8FB</color>
+    <color name="white_text_light">#BAC0CF</color>
+    <color name="blue_light">#D9E9FF</color>
+
+
+    <color name="text">#111111</color>
+    <color name="text_light">#37ffffff</color>
+    <color name="text_light1">#9BA0AF</color>
+
+    <!--    bar color-->
+    <color name="bar_color_1">#00A0EC</color>
+    <color name="bar_color_2">#2D55B6</color>
+
+    <!--    button selected or notSelected-->
+    <color name="selected_btn">#00A0EC</color>
+    <color name="unSelected_btn">#ACB2C1</color>
+
+
+    <color name="text_title_color">#1C1C1C</color>
+    <color name="background_gradient_start">#000000</color>
+    <color name="background_gradient_end">#DDDDDD</color>
+    <color name="fastlane_background">#0096a6</color>
+    <color name="search_opaque">#ffaa3f</color>
+    <color name="selected_background">#ffaa3f</color>
+    <color name="default_background">#3d3d3d</color>
+
+</resources>

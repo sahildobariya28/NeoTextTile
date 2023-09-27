@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.example.texttile.presentation.ui.lib.bottom_navigation.MeowBottomNavigation"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--    <androidx.viewpager2.widget.ViewPager2-->
+        <!--        android:id="@+id/viewpager"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="0dp"-->
+        <!--        android:layout_weight="1"-->
+        <!--        android:visibility="gone"-->
+        <!--        app:layout_constraintBottom_toTopOf="@+id/meow_bottom_navigation"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toTopOf="@+id/meow_bottom_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.example.texttile.presentation.ui.lib.bottom_navigation.MeowBottomNavigation
+            android:id="@+id/meow_bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:mbn_backgroundBottomColor="@color/white"
+            app:mbn_circleColor="@color/white"
+            app:mbn_countBackgroundColor="@color/btn_color"
+            app:mbn_countTextColor="#ffffff"
+            android:isScrollContainer="false"
+            app:mbn_defaultIconColor="@color/unSelected_btn"
+            app:mbn_rippleColor="@color/btn_color"
+            app:mbn_selectedIconColor="@color/selected_btn"
+            app:mbn_shadowColor="#1f212121" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

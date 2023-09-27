@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_order_no"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:height="55dp"
+            android:background="@drawable/edit_bg_white"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:singleLine="true"
+            android:text="Order No"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white_text_light" />
+
+    </LinearLayout>
+</layout>

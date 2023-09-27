@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/card_bg</item>
+    </style>
+
+    <style name="TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <declare-styleable name="CellImageView">
+        <attr name="meow_imageview_useColor" format="boolean" />
+        <attr name="meow_imageview_isBitmap" format="boolean" />
+        <attr name="meow_imageview_resource" format="reference" />
+        <attr name="meow_imageview_color" format="color" />
+        <attr name="meow_imageview_size" format="dimension" />
+        <attr name="meow_imageview_isAction" format="boolean" />
+        <attr name="meow_imageview_actionBackgroundAlpha" format="boolean" />
+        <attr name="meow_imageview_changeSize" format="boolean" />
+        <attr name="meow_imageview_fitImage" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="MeowBottomNavigation">
+        <attr name="mbn_defaultIconColor" format="color" />
+        <attr name="mbn_selectedIconColor" format="color" />
+        <attr name="mbn_backgroundBottomColor" format="color" />
+        <attr name="mbn_circleColor" format="color" />
+        <attr name="mbn_countTextColor" format="color" />
+        <attr name="mbn_countBackgroundColor" format="color" />
+        <attr name="mbn_countTypeface" format="string" />
+        <attr name="mbn_rippleColor" format="color" />
+        <attr name="mbn_shadowColor" format="color" />
+    </declare-styleable>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/scale_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_out</item>
+    </style>
+
+    <style name="DialogSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+
+
+    <style name="SplashTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher</item>
+        <item name="windowSplashScreenAnimationDuration">200</item>
+        <item name="postSplashScreenTheme">@style/Theme.TextTile</item>
+    </style>
+
+
+    <declare-styleable name="SwipeRevealLayout">
+        <attr name="dragEdge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+
+        <attr name="mode">
+            <enum name="normal" value="0" />
+            <enum name="same_level" value="1" />
+        </attr>
+
+        <attr name="flingVelocity" format="integer" />
+
+        <attr name="minDistRequestDisallowParent" format="dimension" />
+    </declare-styleable>
+
+</resources>

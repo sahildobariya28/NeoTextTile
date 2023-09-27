@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btn_padding"
+        android:title="Pending" />
+
+    <item
+        android:id="@+id/btn_on_machine_padding"
+        android:title="On Machine Padding" />
+
+    <item
+        android:id="@+id/btn_on_machine_completed"
+        android:title="On Machine Completed" />
+
+    <item
+        android:id="@+id/btn_ready_to_dispatch"
+        android:title="Ready to Dispatch" />
+
+    <item
+        android:id="@+id/btn_warehouse"
+        android:title="Warehouse" />
+
+    <item
+        android:id="@+id/btn_final_dispatch"
+        android:title="Final Dispatch" />
+
+    <item
+        android:id="@+id/btn_delivered"
+        android:title="Delivered" />
+
+    <item
+        android:id="@+id/btn_damage"
+        android:title="Damage" />
+    <item
+        android:id="@+id/btn_see_all"
+        android:title="See All" />
+
+</menu>

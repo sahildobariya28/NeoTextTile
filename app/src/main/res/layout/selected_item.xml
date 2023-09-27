@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="15dp">
+
+            <TextView
+                android:id="@+id/text_jala_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/medium"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="Name"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/btn_select_img"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:includeFontPadding="false"
+                android:padding="5dp"
+                android:src="@drawable/btn_add"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:adjustViewBounds="true"
+                android:includeFontPadding="false"
+                android:padding="5dp"
+                android:src="@drawable/delete"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_theme_light"
+            android:layout_marginHorizontal="10dp" />
+
+
+    </LinearLayout>
+</layout>

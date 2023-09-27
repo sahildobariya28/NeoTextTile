@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="Machine Name"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/edit_bg_white">
+
+                    <TextView
+                        android:id="@+id/text_machine"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@drawable/edit_bg_white"
+                        android:fontFamily="@font/medium"
+                        android:gravity="center_vertical"
+                        android:hint="Enter Machine"
+                        android:includeFontPadding="false"
+                        android:inputType="textCapCharacters"
+                        android:paddingHorizontal="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_title_color"
+                        android:textColorHint="@color/white_text_light"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ProgressBar
+                        android:id="@+id/progress"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:padding="18dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/text_machine"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="Order No"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_order_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/edit_bg_white"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Order no"
+                    android:includeFontPadding="false"
+                    android:inputType="textCapCharacters"
+                    android:paddingHorizontal="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_title_color"
+                    android:textColorHint="@color/white_text_light"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="Party Name"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edit_party_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/edit_bg_white"
+                    android:fontFamily="@font/medium"
+                    android:hint="Enter Party Name"
+                    android:includeFontPadding="false"
+                    android:inputType="textCapCharacters"
+                    android:paddingHorizontal="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_title_color"
+                    android:textColorHint="@color/white_text_light"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="Design No"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edit_design_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/edit_bg_white"
+                    android:fontFamily="@font/medium"
+                    android:hint="Enter Design no"
+                    android:includeFontPadding="false"
+                    android:inputType="textCapCharacters"
+                    android:paddingHorizontal="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_title_color"
+                    android:textColorHint="@color/white_text_light"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="Shade No"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edit_shade_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/edit_bg_white"
+                    android:fontFamily="@font/medium"
+                    android:hint="Enter Shade no"
+                    android:includeFontPadding="false"
+                    android:inputType="textCapCharacters"
+                    android:paddingHorizontal="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_title_color"
+                    android:textColorHint="@color/white_text_light"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="Quantity"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edit_qty"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/edit_bg_white"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/medium"
+                    android:hint="Enter Quantity"
+                    android:includeFontPadding="false"
+                    android:inputType="numberDecimal"
+                    android:paddingHorizontal="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_title_color"
+                    android:textColorHint="@color/white_text_light"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/btn_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/btn_bg"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:padding="15dp"
+                    android:text="Add"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>
